@@ -55,6 +55,11 @@ if user_text:
         st.markdown(user_text)
     
     retrieved = retrieve_top_k(client, user_text, k=4)
+    # with st.expander("Retrieved Knowledge Snippets (for debugging)"):
+    #     for i, (t,s) in enumerate(retrieved, start=1):
+    #         st.write(f"**[KB{i} | score={s:.3f}]**\n{t}\n")
+    #         st.code(t)
+
     context_block = build_context_block(retrieved)
 
     lang_rule = "Respond in Thai." if is_thai(user_text) else "Respond in English."

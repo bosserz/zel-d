@@ -1,5 +1,9 @@
 RAG_RULES = """
 Use ONLY the provided Zel-D knowledge snippets to answer.
+
+When you use facts, cite them like (KB1) or (KB2) based on the snippet number.
+If multiple snippets are used, cite multiple: (KB1, KB3).
+
 If the snippets do not contain the answer:
 - Say you don’t have enough information, and
 - Offer to connect the user with Zel-D support.
