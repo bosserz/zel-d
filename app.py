@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from rag import retrieve_top_k
 from policies import RAG_RULES, build_context_block
+from guardrails import ESCALATION_RULES, RESPONSE_FORMAT
 
 load_dotenv()
 
@@ -51,7 +52,12 @@ if user_text:
     retrieved = retrieve_top_k(client, user_text, k=4)
     context_block = build_context_block(retrieved)
 
-    INSTRUCTIONS = SYSTEM_PROMPT + "\n\n" + RAG_RULES + "\n\n" + "ZEL-D KNOWLEDGE SNIPPETS:\n" + context_block
+    INSTRUCTIONS = (
+        SYSTEM_PROMPT 
+        + "\n\n" + RAG_RULES 
+        + "\n\n" + ESCALATION_RULES
+        + "\n\n" + RESPONSE_FORMAT
+        + "\n\n" + "ZEL-D KNOWLEDGE SNIPPETS:\n" + context_block)
     # Call OpenAI API to get the assistant's response
     response = client.responses.create(
         model="gpt-5.2",
