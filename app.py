@@ -6,6 +6,11 @@ from rag import retrieve_top_k
 from policies import RAG_RULES, build_context_block
 from guardrails import ESCALATION_RULES, RESPONSE_FORMAT
 
+import re
+
+def is_thai(text: str) -> bool:
+    return re.search(r'[\u0E00-\u0E7F]', text) is not None
+
 load_dotenv()
 
 st.set_page_config(page_title="Zel-D Chatbot", page_icon=":robot_face:", layout="wide")
@@ -52,12 +57,16 @@ if user_text:
     retrieved = retrieve_top_k(client, user_text, k=4)
     context_block = build_context_block(retrieved)
 
+    lang_rule = "Respond in Thai." if is_thai(user_text) else "Respond in English."
+
     INSTRUCTIONS = (
         SYSTEM_PROMPT 
         + "\n\n" + RAG_RULES 
         + "\n\n" + ESCALATION_RULES
         + "\n\n" + RESPONSE_FORMAT
         + "\n\n" + "ZEL-D KNOWLEDGE SNIPPETS:\n" + context_block)
+    
+    INSTRUCTIONS = lang_rule + "\n\n" + INSTRUCTIONS
     # Call OpenAI API to get the assistant's response
     response = client.responses.create(
         model="gpt-5.2",
