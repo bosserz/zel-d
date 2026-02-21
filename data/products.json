@@ -1,0 +1,78 @@
+[
+  {
+    "sku": "PRO-001",
+    "name": "Zel-D Probiotic Plus (Original)",
+    "category": "probiotic_drink",
+    "description": "Daily probiotic drink for gut-friendly routine.",
+    "key_facts": {
+      "sugar_g": 4,
+      "calories": 45,
+      "storage": "Keep refrigerated (2–8°C).",
+      "allergens": "Milk"
+    }
+  },
+  {
+    "sku": "PRO-002",
+    "name": "Zel-D Probiotic Plus (Mixed Berry)",
+    "category": "probiotic_drink",
+    "description": "Probiotic drink with berry flavor.",
+    "key_facts": {
+      "sugar_g": 5,
+      "calories": 50,
+      "storage": "Keep refrigerated (2–8°C).",
+      "allergens": "Milk"
+    }
+  },
+  {
+    "sku": "PROT-101",
+    "name": "Zel-D Protein Shake (Chocolate)",
+    "category": "protein_drink",
+    "description": "High-protein ready-to-drink shake.",
+    "key_facts": {
+      "protein_g": 25,
+      "sugar_g": 3,
+      "calories": 160,
+      "storage": "Refrigerate after opening.",
+      "allergens": "Milk, Soy"
+    }
+  },
+  {
+    "sku": "PROT-102",
+    "name": "Zel-D Protein Shake (Vanilla)",
+    "category": "protein_drink",
+    "description": "Smooth vanilla protein shake.",
+    "key_facts": {
+      "protein_g": 25,
+      "sugar_g": 4,
+      "calories": 165,
+      "storage": "Refrigerate after opening.",
+      "allergens": "Milk, Soy"
+    }
+  },
+  {
+    "sku": "MEAL-201",
+    "name": "Zel-D Clean Meal: Chicken Quinoa Bowl",
+    "category": "clean_food",
+    "description": "Ready-to-eat clean meal, balanced macros.",
+    "key_facts": {
+      "calories": 420,
+      "protein_g": 35,
+      "storage": "Keep refrigerated (2–8°C). Consume within 3 days.",
+      "reheat": "Microwave 2–3 minutes.",
+      "allergens": "None declared (produced in facility handling nuts)"
+    }
+  },
+  {
+    "sku": "MEAL-202",
+    "name": "Zel-D Clean Meal: Salmon Veggie Plate",
+    "category": "clean_food",
+    "description": "High-protein salmon with vegetables.",
+    "key_facts": {
+      "calories": 480,
+      "protein_g": 38,
+      "storage": "Keep refrigerated (2–8°C). Consume within 2 days.",
+      "reheat": "Microwave 2–3 minutes.",
+      "allergens": "Fish"
+    }
+  }
+]
