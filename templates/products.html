@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Products | Zel-D{% endblock %}
+{% block content %}
+
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h1 class="text-3xl font-bold mb-10 text-center">Our Products</h1>
+
+  <!-- Filters -->
+  <div class="flex flex-col md:flex-row gap-4 mb-10">
+    <select id="categoryFilter" class="border rounded-lg p-3 text-sm">
+      <option value="all">All Categories</option>
+      <option value="probiotic">Probiotic Drinks</option>
+      <option value="protein">Protein Drinks</option>
+      <option value="food">Ready-to-eat Clean Food</option>
+    </select>
+
+    <select id="tagFilter" class="border rounded-lg p-3 text-sm">
+      <option value="all">All Tags</option>
+      <option value="low-sugar">Low Sugar</option>
+      <option value="high-protein">High Protein</option>
+    </select>
+  </div>
+
+  <!-- Product Grid -->
+  <div id="productGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <div class="product-card border rounded-2xl p-6 shadow-soft"
+         data-category="probiotic" data-tags="low-sugar">
+      <div class="h-40 bg-green-100 rounded-xl mb-4"></div>
+      <h3 class="font-semibold">Zel-D ProBio Classic</h3>
+      <p class="text-sm text-gray-600 mb-2">Gut-friendly probiotic drink.</p>
+      <p class="text-xs text-gray-500 mb-3">80 kcal · 2g protein · 5g sugar</p>
+      <a href="#" class="text-brand-green text-sm font-medium">Learn more</a>
+    </div>
+
+    <div class="product-card border rounded-2xl p-6 shadow-soft"
+         data-category="protein" data-tags="high-protein low-sugar">
+      <div class="h-40 bg-green-100 rounded-xl mb-4"></div>
+      <h3 class="font-semibold">Zel-D Protein Boost</h3>
+      <p class="text-sm text-gray-600 mb-2">High protein performance drink.</p>
+      <p class="text-xs text-gray-500 mb-3">180 kcal · 20g protein · 3g sugar</p>
+      <a href="#" class="text-brand-green text-sm font-medium">Learn more</a>
+    </div>
+
+    <div class="product-card border rounded-2xl p-6 shadow-soft"
+         data-category="food" data-tags="high-protein">
+      <div class="h-40 bg-green-100 rounded-xl mb-4"></div>
+      <h3 class="font-semibold">Zel-D Clean Bowl</h3>
+      <p class="text-sm text-gray-600 mb-2">Balanced ready-to-eat meal.</p>
+      <p class="text-xs text-gray-500 mb-3">350 kcal · 25g protein · 6g sugar</p>
+      <a href="#" class="text-brand-green text-sm font-medium">Learn more</a>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

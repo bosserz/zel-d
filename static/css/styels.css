@@ -1,0 +1,155 @@
+/* Optional custom overrides */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Zel-D Chat Widget */
+
+.zeld-chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Toggle Button */
+.zeld-chat-toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zeld-chat-toggle:hover {
+  opacity: 0.9;
+}
+
+/* Chat Window */
+.zeld-chat-window {
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  height: 480px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.zeld-chat-window.open {
+  display: flex;
+}
+
+/* Header */
+.zeld-chat-header {
+  background: #16a34a;
+  color: white;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zeld-chat-subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.zeld-chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Messages */
+.zeld-chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zeld-chat-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.zeld-chat-message.user {
+  align-self: flex-end;
+  background: #16a34a;
+  color: white;
+}
+
+.zeld-chat-message.bot {
+  align-self: flex-start;
+  background: white;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.zeld-chat-message.typing {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Input Area */
+.zeld-chat-form {
+  display: flex;
+  border-top: 1px solid #e5e7eb;
+  padding: 10px;
+  background: white;
+}
+
+.zeld-chat-input {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.zeld-chat-input:focus {
+  border-color: #16a34a;
+}
+
+.zeld-chat-send {
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.zeld-chat-send:hover {
+  opacity: 0.9;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .zeld-chat-window {
+    height: 70vh;
+  }
+}

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Zel-D | Clean Nutrition{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<section class="bg-gradient-to-br from-green-50 to-white">
+  <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+      Clean Nutrition.<br />
+      <span class="text-brand-green">Delivered Fresh.</span>
+    </h1>
+    <p class="text-gray-600 max-w-xl mx-auto mb-8">
+      Probiotic drinks, high-protein beverages, and ready-to-eat clean meals crafted for your wellness journey.
+    </p>
+    <a href="/products"
+       class="inline-block bg-brand-green text-white px-8 py-3 rounded-full shadow-soft hover:opacity-90 transition">
+       Explore Products
+    </a>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-semibold mb-10 text-center">Product Categories</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+      <div class="h-32 rounded-xl bg-gradient-to-r from-green-200 to-green-100 mb-6"></div>
+      <h3 class="font-semibold mb-2">Probiotic Drinks</h3>
+      <p class="text-sm text-gray-600">Support gut health with live cultures and low sugar formulas.</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+      <div class="h-32 rounded-xl bg-gradient-to-r from-emerald-200 to-green-100 mb-6"></div>
+      <h3 class="font-semibold mb-2">Protein Drinks</h3>
+      <p class="text-sm text-gray-600">High protein, clean ingredients, no unnecessary additives.</p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-soft text-center">
+      <div class="h-32 rounded-xl bg-gradient-to-r from-lime-200 to-green-100 mb-6"></div>
+      <h3 class="font-semibold mb-2">Ready-to-eat Clean Food</h3>
+      <p class="text-sm text-gray-600">Fresh, balanced meals delivered with cold-chain logistics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-semibold mb-10 text-center">Featured Products</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="p-6 border rounded-2xl shadow-soft">
+        <div class="h-40 bg-gradient-to-r from-green-100 to-green-50 rounded-xl mb-4"></div>
+        <h3 class="font-semibold">Zel-D ProBio Classic</h3>
+        <p class="text-sm text-gray-600 mb-2">Low sugar probiotic drink.</p>
+        <p class="text-xs text-gray-500">80 kcal · 2g protein · 5g sugar</p>
+      </div>
+      <div class="p-6 border rounded-2xl shadow-soft">
+        <div class="h-40 bg-gradient-to-r from-green-100 to-green-50 rounded-xl mb-4"></div>
+        <h3 class="font-semibold">Zel-D Protein Boost</h3>
+        <p class="text-sm text-gray-600 mb-2">High protein recovery drink.</p>
+        <p class="text-xs text-gray-500">180 kcal · 20g protein · 3g sugar</p>
+      </div>
+      <div class="p-6 border rounded-2xl shadow-soft">
+        <div class="h-40 bg-gradient-to-r from-green-100 to-green-50 rounded-xl mb-4"></div>
+        <h3 class="font-semibold">Zel-D Clean Bowl</h3>
+        <p class="text-sm text-gray-600 mb-2">Balanced ready meal.</p>
+        <p class="text-xs text-gray-500">350 kcal · 25g protein · 6g sugar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-semibold mb-10 text-center">What Our Customers Say</h2>
+  <div class="grid md:grid-cols-3 gap-8 text-sm">
+    <div class="bg-white p-6 rounded-2xl shadow-soft">
+      “Fresh, clean, and genuinely delicious.”
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-soft">
+      “Finally a protein drink without weird aftertaste.”
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-soft">
+      “Perfect for my busy healthy lifestyle.”
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Preview -->
+<section class="bg-green-50 py-16 text-center">
+  <h2 class="text-2xl font-semibold mb-6">Have Questions?</h2>
+  <p class="text-gray-600 mb-8">Learn about shipping, storage, allergens and more.</p>
+  <a href="faq.html"
+     class="bg-brand-green text-white px-8 py-3 rounded-full shadow-soft hover:opacity-90">
+     Visit FAQ & Policy
+  </a>
+</section>
+
+{% endblock %}
